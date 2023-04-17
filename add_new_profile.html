@@ -1,0 +1,45 @@
+
+{% block content %}
+<h1>Add New Profile</h1>
+<form method="post">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="first_name">First Name:</label>
+    <input type="text" class="form-control" id="first_name" name="first_name">
+  </div>
+  <div class="form-group">
+    <label for="last_name">Last Name:</label>
+    <input type="text" class="form-control" id="last_name" name="last_name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" name="email">
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone:</label>
+    <input type="text" class="form-control" id="phone" name="phone">
+  </div>
+  <div class="form-group">
+    <label for="avatar">Avatar:</label>
+    <input type="file" class="form-control-file" id="avatar" name="avatar">
+  </div>
+  <div class="form-group">
+    <label for="years_of_experience">Years of Experience:</label>
+    <input type="number" class="form-control" id="years_of_experience" name="years_of_experience">
+  </div>
+  <div class="form-group">
+    <label for="skills">Skills:</label>
+    <input type="text" class="form-control" id="skills" name="skills">
+  </div>
+  <button type="submit" class="btn btn-primary">Add Profile</button>
+</form>
+
+</form>
+   <form action="indexpage" method="post">
+   {% csrf_token %}
+      <input type="submit" name='back' value="Back">
+   </form>
+   </center>
+</body>
+</html>
+{% endblock %}

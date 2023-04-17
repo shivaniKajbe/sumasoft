@@ -1,0 +1,40 @@
+{% load static %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{ profile.first_name }} {{ profile.last_name }}</h1>
+      <hr>
+      <img src="{% static 'images/' %}"  class="img-thumbnail" style="max-width: 200px;">
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <th>First Name:</th>
+            <td>{{ profile.first_name }}</td>
+          </tr>
+          <tr>
+            <th>Last Name:</th>
+            <td>{{ profile.last_name }}</td>
+          </tr>
+          <tr>
+            <th>Email:</th>
+            <td>{{ profile.email }}</td>
+          </tr>
+          <tr>
+            <th>Phone:</th>
+            <td>{{ profile.phone }}</td>
+          </tr>
+          <tr>
+            <th>Years of Experience:</th>
+            <td>{{ profile.years_of_experience }}</td>
+          </tr>
+          <tr>
+            <th>Skills:</th>
+            <td>{{ profile.skills }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

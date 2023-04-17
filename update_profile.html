@@ -1,0 +1,26 @@
+
+
+{% block content %}
+  <h1>Update Profile</h1>
+  {% if error == 'yes' %}
+    <p class="error">An error occurred while updating the profile.</p>
+  {% endif %}
+  <form method="post">
+    {% csrf_token %}
+    <label for="first_name">First Name:</label>
+    <input type="text" name="first_name" value="{{ profile.first_name }}"><br>
+    <label for="last_name">Last Name:</label>
+    <input type="text" name="last_name" value="{{ profile.last_name }}"><br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" value="{{ profile.email }}"><br>
+    <label for="phone">Phone:</label>
+    <input type="text" name="phone" value="{{ profile.phone }}"><br>
+    <label for="avatar">Avatar:</label>
+    <input type="url" name="avatar" value="{{ profile.avatar }}"><br>
+    <label for="years_of_experience">Years of Experience:</label>
+    <input type="number" name="years_of_experience" value="{{ profile.years_of_experience }}"><br>
+    <label for="skills">Skills:</label>
+    <input type="text" name="skills" value="{{ profile.skills }}"><br>
+    <input type="submit" value="Update Profile">
+  </form>
+{% endblock %}
